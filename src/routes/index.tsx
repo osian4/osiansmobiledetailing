@@ -76,16 +76,14 @@ const services = [
   },
   {
     title: "Exterior Detail",
-    price: "£119.99",
+    price: "£89.99",
     description:
-      "Removes micro-contaminants from your paint, leaving a smooth finish, which is protected by a ceramic sealant.",
+      "A thorough exterior clean that lifts away dirt and road grime, finished with a ceramic sealant for a long-lasting, glossy shine.",
     sections: [
       {
         heading: "Exterior (wash, prep & protection)",
         items: [
           "Professional hand wash + foam bath",
-          "Clay towel treatment",
-          "Micro contaminants removed",
           "Exterior windows cleaned",
           "Tyres and wheels deep cleaned",
           "Plastic trim dressed and shined",
