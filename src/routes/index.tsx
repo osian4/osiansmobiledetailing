@@ -311,6 +311,16 @@ function Index() {
             <p className="mt-1 text-sm text-muted-foreground">Telford, UK</p>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
+            <Phone className="mx-auto h-6 w-6 text-primary" />
+            <h3 className="mt-3 font-display text-xl">Phone</h3>
+            <a
+              href="tel:+447482424580"
+              className="mt-1 block text-sm text-muted-foreground transition hover:text-primary"
+            >
+              07482 424580
+            </a>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
             <Mail className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Email</h3>
             <a
