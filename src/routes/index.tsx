@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, MapPin, Phone, Mail, Sparkles } from "lucide-react";
+import { Check, MapPin, Mail, Sparkles } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
 
