@@ -298,10 +298,55 @@ function Index() {
           <div className="rounded-2xl border border-border bg-card p-6">
             <Mail className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Email</h3>
-            <p className="mt-1 text-sm text-muted-foreground">Drop us a message</p>
+            <a
+              href="mailto:osiansmobiledetailing@gmail.com"
+              className="mt-1 block break-all text-sm text-muted-foreground transition hover:text-primary"
+            >
+              osiansmobiledetailing@gmail.com
+            </a>
           </div>
         </div>
+
+        {/* BOOKING INFORMATION */}
+        <div className="mt-16 rounded-2xl border border-border bg-card p-8 text-left">
+          <h3 className="text-center font-display text-2xl tracking-wide">Booking Information</h3>
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            Please review the following before booking your detail.
+          </p>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                title: "Final Pricing",
+                body: "All listed prices are starting rates. The final quote is confirmed on-site following a brief inspection of the vehicle's size, condition and level of soiling.",
+              },
+              {
+                title: "Pet Hair Removal",
+                body: "Removal of pet hair requires additional time and specialist tools, and is charged as an add-on to the standard service.",
+              },
+              {
+                title: "Personal Belongings",
+                body: "For liability and security reasons, please remove all personal items from your vehicle prior to your appointment.",
+              },
+              {
+                title: "On-Site Utilities",
+                body: "As a mobile service, we use the customer's water and electricity supply. An accessible outdoor water tap and external power outlet are required at the appointment location.",
+              },
+            ].map((item) => (
+              <li
+                key={item.title}
+                className="flex gap-3 rounded-xl border border-border/60 bg-background/50 p-5"
+              >
+                <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                <div>
+                  <h4 className="font-display text-lg tracking-wide">{item.title}</h4>
+                  <p className="mt-1 text-sm text-muted-foreground">{item.body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
