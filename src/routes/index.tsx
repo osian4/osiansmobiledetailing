@@ -78,7 +78,7 @@ const services = [
     title: "Exterior Detail",
     price: "£119.99",
     description:
-      "Removes micro-contaminants from your paint, leaving a smooth, protected finish that lasts 1–2 months.",
+      "Removes micro-contaminants from your paint, leaving a smooth finish, which is protected by a ceramic sealant.",
     sections: [
       {
         heading: "Exterior (wash, prep & protection)",
@@ -152,7 +152,7 @@ function Index() {
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
               Premium mobile car detailing brought directly to your driveway.
-              Interior, exterior and full-service packages with long-lasting ceramic protection.
+              Interior, exterior and full-service packages with ceramic protection.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
