@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, MapPin, Mail, Sparkles } from "lucide-react";
+import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
 
@@ -119,12 +119,34 @@ function Index() {
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
-          <a
-            href="#contact"
-            className="justify-self-end rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-          >
-            Book Now
-          </a>
+          <div className="flex items-center gap-2 justify-self-end sm:gap-3">
+            <a
+              href="https://www.instagram.com/osiansmobiledetailing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="rounded-full border border-border p-2 text-muted-foreground transition hover:border-primary hover:text-primary"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@osiansmobiledetailing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="rounded-full border border-border p-2 text-muted-foreground transition hover:border-primary hover:text-primary"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.79a8.16 8.16 0 0 0 4.77 1.52V6.87a4.85 4.85 0 0 1-1.84-.18z"/>
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+            >
+              Book Now
+            </a>
+          </div>
         </div>
       </header>
 
@@ -282,11 +304,21 @@ function Index() {
           Send a message or give us a call — we'll get your car gleaming in no time.
         </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
           <div className="rounded-2xl border border-border bg-card p-6">
             <MapPin className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Location</h3>
             <p className="mt-1 text-sm text-muted-foreground">Telford, UK</p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <Phone className="mx-auto h-6 w-6 text-primary" />
+            <h3 className="mt-3 font-display text-xl">Phone</h3>
+            <a
+              href="tel:+447482424580"
+              className="mt-1 block text-sm text-muted-foreground transition hover:text-primary"
+            >
+              07482 424580
+            </a>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
             <Mail className="mx-auto h-6 w-6 text-primary" />
