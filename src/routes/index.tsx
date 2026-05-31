@@ -78,7 +78,7 @@ const services = [
     title: "Exterior Detail",
     price: "£89.99",
     description:
-      "A thorough exterior clean that lifts away dirt and road grime, finished with a ceramic sealant for a long-lasting, glossy shine.",
+      "A meticulous exterior clean finished with a premium ceramic sealant to protect your paintwork and deliver a long-lasting, glossy shine.",
     sections: [
       {
         heading: "Exterior (wash, prep & protection)",
@@ -107,21 +107,21 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <a href="#top" className="flex items-center gap-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-3">
+          <a href="#top" className="flex items-center gap-3 justify-self-start">
             <img src={logo} alt="Osian's Mobile Detailing" className="h-11 w-11 rounded-full" />
             <span className="hidden font-display text-xl tracking-wider sm:block">
               OSIAN'S <span className="text-primary">MOBILE</span> DETAILING
             </span>
           </a>
-          <nav className="hidden gap-8 text-sm font-medium md:flex">
+          <nav className="hidden justify-self-center gap-8 text-sm font-medium md:flex">
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
           <a
             href="#contact"
-            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+            className="justify-self-end rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
           >
             Book Now
           </a>
