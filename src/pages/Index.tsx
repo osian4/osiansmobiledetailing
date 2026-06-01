@@ -1,19 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Osian's Mobile Detailing — Telford, UK" },
-      { name: "description", content: "Professional mobile car detailing in Telford, UK. Interior, exterior and full detail packages with ceramic protection." },
-      { property: "og:title", content: "Osian's Mobile Detailing — Telford, UK" },
-      { property: "og:description", content: "Professional mobile car detailing in Telford, UK." },
-    ],
-  }),
-  component: Index,
-});
 
 const services = [
   {
@@ -102,7 +89,7 @@ const services = [
   },
 ];
 
-function Index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
@@ -371,7 +358,6 @@ function Index() {
           </ul>
         </div>
       </section>
-
 
       {/* FOOTER */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
