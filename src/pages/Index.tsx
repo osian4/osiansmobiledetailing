@@ -58,7 +58,6 @@ const services = [
         items: [
           "1–2 month ceramic paint sealant",
           "Premium ceramic tyre shine",
-          "Plastic trim UV coating",
         ],
       },
     ],
