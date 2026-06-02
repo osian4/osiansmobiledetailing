@@ -250,7 +250,7 @@ export default function Index() {
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {[
               "Clay Towel Treatment (paint decontamination)",
-              "Carpet and Seat Extraction",
+              "Carpet and Seat Shampoo and Extraction",
               "Engine Bay Cleaning",
             ].map((a) => (
               <div key={a} className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/50 p-4">
