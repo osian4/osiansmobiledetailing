@@ -32,7 +32,7 @@ const services = [
     featured: true,
     sections: [
       {
-        heading: "Interior",
+        heading: "Interior (detailed cleaning)",
         items: [
           "Vacuum of all surfaces",
           "Seat upholstery cleaning with light stain removal",
@@ -45,9 +45,9 @@ const services = [
         ],
       },
       {
-        heading: "Exterior",
+        heading: "Exterior (detailed wash)",
         items: [
-          "Professional hand wash + foam bath",
+          "Multi stage safe wash process",
           "Wheels + rims deep cleaned",
           "Exterior windows cleaned",
           "Ceramic sealant applied",
@@ -69,9 +69,9 @@ const services = [
       "A meticulous exterior clean finished with a premium ceramic sealant to protect your paintwork and deliver a long-lasting, glossy shine.",
     sections: [
       {
-        heading: "Exterior (wash, prep & protection)",
+        heading: "Exterior (detailed wash)",
         items: [
-          "Professional hand wash + foam bath",
+          "Multi stage safe wash process",
           "Exterior windows cleaned",
           "Tyres and wheels deep cleaned",
           "Ceramic paint sealant applied",
