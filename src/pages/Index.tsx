@@ -48,6 +48,8 @@ const services = [
         heading: "Exterior (detailed wash)",
         items: [
           "Multi stage safe wash process",
+          "Pre-wash with snow foam",
+          "Safe contact wash",
           "Wheels + rims deep cleaned",
           "Exterior windows cleaned",
           "Ceramic sealant applied",
@@ -72,6 +74,8 @@ const services = [
         heading: "Exterior (detailed wash)",
         items: [
           "Multi stage safe wash process",
+          "Pre-wash with snow foam",
+          "Safe contact wash",
           "Exterior windows cleaned",
           "Tyres and wheels deep cleaned",
           "Ceramic paint sealant applied",
