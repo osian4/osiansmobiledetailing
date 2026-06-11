@@ -1,32 +1,27 @@
-## Goal
+## Plan: Two-sided business card images
 
-Generate **6 different hero background images** in the brand's black/green/white style, so you can pick your favourite and I'll swap it into the site.
+I'll generate **two separate PNG images** (front + back) for Osian's Mobile Detailing — dark & premium style matching the website's black background and green primary accent. **No website code will be changed.**
 
-## The 6 options
+### Front card
+- Dark background with subtle green glow accent
+- Osian's Mobile Detailing logo (using `src/assets/logo.png`)
+- Business name: "OSIAN'S MOBILE DETAILING" (green "MOBILE" accent to match the nav)
+- Owner name: **Patrik-Valentin Osian**
+- Location badge: "Based in Telford, UK" with pin icon
 
-All featuring a black luxury car, split between two moods you picked:
+### Back card
+- Same dark premium background
+- Phone: 07482 424580
+- Email: osiansmobiledetailing@gmail.com
+- Socials: @osiansmobiledetailing (Instagram · TikTok · Facebook)
+- Small tagline accent: "Detail that shines."
 
-**Wet & soapy close-ups (3):**
-1. Macro shot of thick white foam dripping down glossy black paintwork, green rim-lighting on the edges
-2. Water beading on a freshly ceramic-sealed black bonnet, sharp green light reflection
-3. Pressure-washer spray catching the light against a black panel, green neon glow behind
+### Technical details
+- Standard business card ratio (3.5:2), output at ~1750×1000 px
+- Use `imagegen--generate_image` with **premium** quality (text legibility is critical for a business card)
+- Reference the existing logo so the brand feel carries through
+- Save to `/mnt/documents/` as `business-card-front.png` and `business-card-back.png`
+- Visually QA both images after generation; regenerate if text is garbled or layout is broken
+- Deliver via `<presentation-artifact>` tags so you can download them
 
-**Studio glamour shots (3):**
-4. Full black luxury saloon in a dark studio, sweeping green LED strip lighting along its body
-5. Three-quarter front view of a black sports car, single green spotlight overhead, polished concrete floor
-6. Rear of a black luxury car with tail-lights glowing, green ambient haze in the background
-
-Each will be 1920×1080, cinematic, professional automotive photography style — consistent with your current site's look.
-
-## Process
-
-1. Generate all 6 images into a scratch folder (`/mnt/documents/hero-options/`) so they don't touch the live site
-2. Show them all to you in chat
-3. You tell me which number you want
-4. I replace `src/assets/hero-car.jpg` with your pick
-
-## Technical notes
-
-- No code changes happen in this step — only image generation
-- The hero `<img>` in `src/routes/index.tsx` already points at `src/assets/hero-car.jpg`, so the swap is a single file replacement once you've chosen
-- Unused options stay in `/mnt/documents/` (not bundled into the app)
+No files in the project will be touched.
