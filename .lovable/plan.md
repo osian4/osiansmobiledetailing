@@ -1,16 +1,15 @@
-Regenerate the two business card PNGs at `/mnt/documents/business-card-front.png` and `/mnt/documents/business-card-back.png` using `imagegen--edit_image` with the existing logo (`src/assets/logo.png`).
+**Generate a branded QR code for Osian's Mobile Detailing**
 
-**Front card** — same dark premium style as before:
-- Black background (#0a0a0a) with subtle radial green glow
-- Osian's Mobile Detailing logo on the left
-- "OSIAN'S MOBILE DETAILING" wordmark with neon green "MOBILE" accent
-- Green pin icon + "Based in Telford, UK" bottom right
-- Removed: "Patrik-Valentin Osian — Owner"
+Create a high-resolution PNG QR code that links to `https://www.osiansmobiledetailing.com/`.
 
-**Back card** — same dark premium style:
-- Black background, matching aesthetic
-- Three stacked contact rows: phone 07482 424580, email osiansmobiledetailing@gmail.com, socials @osiansmobiledetailing (Instagram · TikTok · Facebook)
-- Small logo watermark bottom-right
-- Removed: "DETAIL THAT SHINES." tagline
+**Design**
+- Dark background matching the website aesthetic (#0a0a0a or similar)
+- QR modules in the brand's neon green accent color
+- Optional: embed the Osian's logo or a small text label in the center
+- Clean, scannable, print-ready resolution
 
-Both 3:2 aspect ratio, premium quality. No website code changes.
+**Deliverable**
+- Save as `/mnt/documents/osians-qr-code.png`
+- Present as a downloadable artifact
+
+No website code changes needed — this is a standalone image asset for external use (business cards, flyers, social media, etc.).
