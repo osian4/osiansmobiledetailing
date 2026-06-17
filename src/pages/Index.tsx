@@ -25,7 +25,7 @@ const services = [
     ],
   },
   {
-    title: "Full Detail",
+    title: "Signature Detail",
     price: "£199.99",
     description:
       "The complete interior and exterior detail — designed to clean every inch of your car.",
