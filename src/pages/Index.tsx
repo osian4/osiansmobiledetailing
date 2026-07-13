@@ -266,6 +266,7 @@ export default function Index() {
               "Clay Towel Treatment (paint decontamination)",
               "Carpet and Seat Shampoo and Extraction",
               "Engine Bay Cleaning",
+              "Maintenance Valet (existing clients only)",
             ].map((a) => (
               <div key={a} className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/50 p-4">
                 <Sparkles className="h-5 w-5 text-primary" />
