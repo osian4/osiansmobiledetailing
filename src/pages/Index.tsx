@@ -358,6 +358,10 @@ export default function Index() {
                 title: "On-Site Utilities",
                 body: "As a mobile service, we use the customer's water and electricity supply. An accessible outdoor water tap and external power outlet are required at the appointment location.",
               },
+              {
+                title: "Deposit Policy",
+                body: "A 25% non-refundable deposit is required to secure all bookings. Work will not begin until the deposit has been received. The deposit will be deducted from your final balance, with the remaining amount due upon completion of the service. If you need to reschedule, please provide at least 24 hours notice and your deposit can be transferred to a new appointment.",
+              },
             ].map((item) => (
               <li
                 key={item.title}
