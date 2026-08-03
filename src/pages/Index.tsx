@@ -33,7 +33,7 @@ const services = [
       {
         heading: "Interior (detailed cleaning)",
         items: [
-          "Vacuum of all surfaces",
+          "Vacuum of seats, carpets, floor mats and boot",
           "Seat upholstery cleaning with light stain removal",
           "Wipe down of all surfaces",
           "All cracks + crevices",
