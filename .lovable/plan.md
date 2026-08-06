@@ -1,42 +1,24 @@
 ## Goal
-Create a downloadable preview image showing how a new **Maintenance Valet** package would look if added below the existing Interior, Signature, and Exterior detail cards on the website. No website code or live preview will be changed.
+Create a downloadable preview image showing how the website would look with a new top announcement bar that reads: **“NEW CUSTOMER OFFER, GET 20% OFF YOUR FIRST FULL DETAIL.”** No website source files will be changed.
 
 ## Deliverable
-A single PNG image (`maintenance-valet-mockup.png`) saved to `/mnt/documents/` for review and download.
+A single PNG image (`new-customer-offer-mockup.png`) saved to `/mnt/documents/` for review and download.
 
 ## Mockup Content
-The image will replicate the existing services section design and include:
-
-- Existing three cards unchanged at the top:
-  - Interior Detail — £149.99
-  - Signature Detail — £199.99 (centred)
-  - Exterior Detail — £79.99
-
-- New **Maintenance Valet** card below them, matching the Signature Detail card format:
-  - Title: **Maintenance Valet**
-  - Description: "A routine clean to maintain the pristine condition of your vehicle."
-  - Price: **From £79.99**
-  - Interior section:
-    - Vacuum of seats, carpets, floor mats and boot
-    - Clean and wipe down of all surfaces
-    - Windows and mirrors cleaned to a streak-free finish
-    - Door jambs cleaned
-    - Boot cleaned
-  - Exterior section:
-    - Multi stage safe wash process
-    - Pre-wash with snow foam
-    - Safe contact wash
-    - Wheels + rims deep cleaned
-    - Exterior windows cleaned
-    - Premium ceramic tyre shine
+- The bar is placed at the very top of the page, above the existing fixed header.
+- It uses the site’s primary green (`bg-primary`) with near-black text (`text-primary-foreground`) to match the “Book Now” button and green accent style.
+- Text is centered, uppercase, bold, with the site’s usual tracking.
+- The existing header is shown directly below the bar, and the hero section starts after it so the layout looks natural.
+- The rest of the page remains unchanged.
 
 ## Approach
-1. Capture a screenshot of the current website services section to match layout, colours, fonts, and card styling exactly.
-2. Use image generation/editing to produce a composite mockup that adds the Maintenance Valet card beneath the existing three cards.
-3. Ensure the new card uses the same dark card style, green accents, typography, and spacing as the existing cards.
-4. Save the final image to `/mnt/documents/maintenance-valet-mockup.png`.
+1. Load the live website preview at desktop width using Playwright.
+2. Inject a temporary top bar into the rendered page only for the screenshot (no code changes).
+3. Adjust the fixed header’s top offset and the hero’s top padding so the bar does not overlap the hero content.
+4. Capture a full-page screenshot of the result.
+5. Save the final image to `/mnt/documents/new-customer-offer-mockup.png`.
 
 ## Out of Scope
-- No edits to `src/pages/Index.tsx` or any other website file.
+- No edits to `src/pages/Index.tsx`, `src/styles.css`, or any other website file.
 - No changes to the live preview or published site.
-- No business card, QR code, or other assets generated.
+- No extra assets beyond the single mockup image.
