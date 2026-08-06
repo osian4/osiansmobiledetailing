@@ -157,7 +157,7 @@ export default function Index() {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-20">
+      <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-32">
         <img
           src={heroCar}
           alt="Detailed black luxury car with green accent lighting"
