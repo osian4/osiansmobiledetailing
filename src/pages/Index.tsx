@@ -95,8 +95,13 @@ const services = [
 export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* ANNOUNCEMENT BAR */}
+      <div className="fixed top-0 z-50 w-full bg-primary py-2 text-center text-sm font-semibold uppercase tracking-widest text-white">
+        NEW CUSTOMER OFFER, GET 20% OFF YOUR FIRST FULL DETAIL
+      </div>
+
       {/* NAV */}
-      <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-10 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
         <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-3">
           <a href="#top" className="flex items-center gap-3 justify-self-start">
             <img src={logo} alt="Osian's Mobile Detailing" className="h-11 w-11 rounded-full" />
