@@ -96,7 +96,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ANNOUNCEMENT BAR */}
-      <div className="fixed top-0 z-50 w-full bg-primary py-2 text-center text-sm font-semibold uppercase tracking-widest text-white">
+      <div className="fixed top-0 z-50 w-full bg-primary px-4 py-2.5 text-center text-[11px] font-semibold uppercase tracking-wide text-white sm:text-xs md:text-sm md:tracking-widest">
         NEW CUSTOMER OFFER, GET 20% OFF YOUR FIRST FULL DETAIL
       </div>
 
