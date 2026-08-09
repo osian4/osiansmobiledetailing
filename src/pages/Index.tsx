@@ -324,26 +324,25 @@ export default function Index() {
             <p className="mt-1 text-sm text-muted-foreground">Instagram</p>
           </a>
 
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <a
+            href="tel:+447482424580"
+            aria-label="Call us on 07482 424580"
+            className="block rounded-2xl border border-border bg-card p-6 text-center transition hover:border-primary hover:text-primary"
+          >
             <Phone className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Phone</h3>
-            <a
-              href="tel:+447482424580"
-              className="mt-1 block text-sm text-muted-foreground transition hover:text-primary"
-            >
-              07482 424580
-            </a>
-          </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
+            <p className="mt-1 text-sm text-muted-foreground">07482 424580</p>
+          </a>
+
+          <a
+            href="mailto:osiansmobiledetailing@gmail.com"
+            aria-label="Email us at osiansmobiledetailing@gmail.com"
+            className="block rounded-2xl border border-border bg-card p-6 text-center transition hover:border-primary hover:text-primary"
+          >
             <Mail className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Email</h3>
-            <a
-              href="mailto:osiansmobiledetailing@gmail.com"
-              className="mt-1 block break-all text-sm text-muted-foreground transition hover:text-primary"
-            >
-              osiansmobiledetailing@gmail.com
-            </a>
-          </div>
+            <p className="mt-1 break-all text-sm text-muted-foreground">osiansmobiledetailing@gmail.com</p>
+          </a>
         </div>
 
         {/* BOOKING INFORMATION */}
