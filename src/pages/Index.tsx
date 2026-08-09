@@ -312,11 +312,18 @@ export default function Index() {
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-border bg-card p-6">
-            <MapPin className="mx-auto h-6 w-6 text-primary" />
-            <h3 className="mt-3 font-display text-xl">Location</h3>
-            <p className="mt-1 text-sm text-muted-foreground">Telford, UK</p>
-          </div>
+          <a
+            href="https://www.instagram.com/osiansmobiledetailing"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Message us on Instagram"
+            className="block rounded-2xl border border-border bg-card p-6 text-center transition hover:border-primary hover:text-primary"
+          >
+            <Instagram className="mx-auto h-6 w-6 text-primary" />
+            <h3 className="mt-3 font-display text-xl">Message</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Instagram</p>
+          </a>
+
           <div className="rounded-2xl border border-border bg-card p-6">
             <Phone className="mx-auto h-6 w-6 text-primary" />
             <h3 className="mt-3 font-display text-xl">Phone</h3>
