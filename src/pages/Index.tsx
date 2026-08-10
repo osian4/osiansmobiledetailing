@@ -5,7 +5,7 @@ import heroCar from "@/assets/hero-car.jpg";
 const services = [
   {
     title: "Interior Detail",
-    price: "£149.99",
+    price: "£119.99",
     description:
       "Thorough interior detailing. Your car's interior will be refreshed in looks and smell for a comfortable drive.",
     sections: [
@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: "Signature Detail",
-    price: "£199.99",
+    price: "£179.99",
     description:
       "The complete interior and exterior detail — designed to clean every inch of your car.",
     featured: true,
