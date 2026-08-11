@@ -4,22 +4,36 @@ import heroCar from "@/assets/hero-car.jpg";
 
 const services = [
   {
-    title: "Interior Detail",
-    price: "£119.99",
+    title: "Premium Valet",
+    price: "£99.99",
     description:
-      "Thorough interior detailing. Your car's interior will be refreshed in looks and smell for a comfortable drive.",
+      "A thorough interior & exterior valet designed to give your vehicle a refresh.",
     sections: [
       {
-        heading: "Interior (detailed cleaning)",
+        heading: "Interior",
         items: [
           "Vacuum of seats, carpets, floor mats and boot",
-          "Seat upholstery cleaning with light stain removal",
-          "Wipe down of all interior surfaces",
-          "All cracks + crevices",
-          "Floor mats cleaned",
+          "Wipe down all interior surfaces",
           "Windows and mirrors cleaned to a streak-free finish",
           "Door jambs cleaned",
           "Boot cleaned",
+        ],
+      },
+      {
+        heading: "Exterior",
+        items: [
+          "Multi stage safe wash process",
+          "Pre-wash with snow foam",
+          "Safe contact wash",
+          "Wheels + Tyres + Barrels deep cleaned",
+          "Exterior windows cleaned",
+        ],
+      },
+      {
+        heading: "Protection",
+        items: [
+          "1-2 Month ceramic paint sealant",
+          "Premium tyre shine",
         ],
       },
     ],
