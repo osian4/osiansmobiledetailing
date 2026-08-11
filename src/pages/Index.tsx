@@ -64,7 +64,7 @@ const services = [
           "Multi stage safe wash process",
           "Pre-wash with snow foam",
           "Safe contact wash",
-          "Wheels + rims deep cleaned",
+          "Wheels + Tyres + Barrels deep cleaned",
           "Exterior windows cleaned",
           "Ceramic sealant applied",
         ],
