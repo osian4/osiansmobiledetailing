@@ -398,7 +398,7 @@ export default function Index() {
               },
               {
                 title: "Maintenance Valet",
-                body: "From £80. To qualify for our Maintenance Valet, your vehicle must have had a Full Signature Detail with us previously, and appointments must be kept within a maximum one-month interval from the previous service. This ensures the vehicle remains in a suitable condition for maintenance-level treatment and allows us to consistently achieve the best possible results. The Maintenance Valet is ideal for keeping your vehicle looking its best with regular, professional upkeep, while reducing the need for more frequent full details.",
+                body: "From £79.99. To qualify for our Maintenance Valet, your vehicle must have had a Full Signature Detail with us previously, and appointments must be kept within a maximum one-month interval from the previous service. This ensures the vehicle remains in a suitable condition for maintenance-level treatment and allows us to consistently achieve the best possible results. The Maintenance Valet is ideal for keeping your vehicle looking its best with regular, professional upkeep, while reducing the need for more frequent full details.",
               },
             ].map((item) => (
               <li
