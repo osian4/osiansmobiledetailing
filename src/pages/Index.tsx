@@ -73,7 +73,7 @@ const services = [
         heading: "Protection",
         items: [
           "1–2 month ceramic paint sealant",
-          "Premium ceramic tyre shine",
+          "Premium tyre shine",
         ],
       },
     ],
