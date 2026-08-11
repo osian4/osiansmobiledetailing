@@ -79,27 +79,36 @@ const services = [
     ],
   },
   {
-    title: "Exterior Detail",
+    title: "Maintenance Valet",
     price: "£79.99",
     description:
-      "A meticulous exterior clean finished with a premium ceramic sealant to protect your paintwork and deliver a long-lasting, glossy shine.",
+      "A regular upkeep service reserved for customers who have had our signature detail, designed to keep your vehicle clean and fresh between more intensive details, covering the essential interior and exterior cleaning.",
     sections: [
       {
-        heading: "Exterior (detailed wash)",
+        heading: "Interior",
+        items: [
+          "Vacuum of seats, carpets, floor mats and boot",
+          "Wipe down all interior surfaces",
+          "Windows and mirrors cleaned to a streak-free finish",
+          "Door jambs cleaned",
+          "Boot cleaned",
+        ],
+      },
+      {
+        heading: "Exterior",
         items: [
           "Multi stage safe wash process",
           "Pre-wash with snow foam",
           "Safe contact wash",
+          "Wheels + Tyres + Barrels deep cleaned",
           "Exterior windows cleaned",
-          "Tyres and wheels deep cleaned",
-          "Ceramic paint sealant applied",
         ],
       },
       {
         heading: "Protection",
         items: [
-          "1–2 month ceramic paint sealant",
-          "Premium ceramic tyre shine",
+          "1-2 Month ceramic paint sealant",
+          "Premium tyre shine",
         ],
       },
     ],
