@@ -6,6 +6,7 @@ const services = [
   {
     title: "Premium Valet",
     price: "£99.99",
+    newCustomerPrice: "£79.99",
     description:
       "A thorough interior & exterior valet designed to give your vehicle a refresh.",
     sections: [
@@ -120,7 +121,7 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* ANNOUNCEMENT BAR */}
       <div className="fixed top-0 z-50 flex h-10 w-full items-center justify-center bg-primary px-4 text-center text-[11px] font-semibold uppercase tracking-wide text-white sm:text-xs md:text-sm md:tracking-widest">
-        NEW CUSTOMER OFFER, GET 20% OFF YOUR FIRST SIGNATURE DETAIL
+        NEW CUSTOMER OFFER, PREMIUM VALET £79.99 (NORMALLY £99.99)
       </div>
 
       {/* NAV */}
@@ -250,8 +251,20 @@ export default function Index() {
               <p className="mt-3 text-sm text-muted-foreground">{s.description}</p>
 
               <div className="my-6 flex items-baseline gap-2 border-y border-border py-5">
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
-                <span className="font-display text-5xl text-primary">{s.price}</span>
+                {s.newCustomerPrice ? (
+                  <div className="flex flex-col gap-1">
+                    <span className="font-display text-3xl text-muted-foreground line-through">{s.price}</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-display text-5xl text-primary">{s.newCustomerPrice}</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary">New Customer Price</span>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
+                    <span className="font-display text-5xl text-primary">{s.price}</span>
+                  </>
+                )}
               </div>
 
               <div className="flex-1 space-y-5">
