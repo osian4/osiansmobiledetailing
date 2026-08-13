@@ -255,6 +255,7 @@ export default function Index() {
                   <div className="flex flex-col gap-1">
                     <span className="font-display text-3xl text-muted-foreground line-through">{s.price}</span>
                     <div className="flex items-baseline gap-2">
+                      <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
                       <span className="font-display text-5xl text-primary">{s.newCustomerPrice}</span>
                       <span className="text-xs font-bold uppercase tracking-widest text-primary">New Customer Price</span>
                     </div>
