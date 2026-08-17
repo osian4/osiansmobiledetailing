@@ -303,16 +303,36 @@ export default function Index() {
         {/* Add-ons */}
         <div className="mt-16 rounded-2xl border border-border bg-card p-8">
           <h3 className="font-display text-2xl tracking-wide">Additional Services</h3>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              "Clay Towel Treatment (paint decontamination)",
-              "Carpet and Seat Shampoo and Extraction",
-              "Engine Bay Cleaning",
-              "Maintenance Valet (existing clients only)",
+              {
+                name: "Paint Decontamination",
+                price: "From £39.99",
+                body: "Iron Remover and Clay towel treatment to safely remove bonded contaminants, leaving the paintwork smooth, clean and ready for protection.",
+              },
+              {
+                name: "Deep Interior Extraction",
+                price: "From £39.99",
+                body: "Deep extraction clean of fabric seats, carpets and mats to remove embedded dirt, stains and grime.",
+              },
+              {
+                name: "Engine Bay Refresh",
+                price: "From £29.99",
+                body: "Thorough clean of the engine bay to remove dirt, grease and grime, leaving it clean, fresh and professionally presented.",
+              },
+              {
+                name: "Maintenance Valet",
+                price: "Existing clients only",
+                body: "A regular upkeep service reserved for customers who have had our Signature Detail, keeping your vehicle clean and fresh between details.",
+              },
             ].map((a) => (
-              <div key={a} className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/50 p-4">
-                <Sparkles className="h-5 w-5 text-primary" />
-                <span className="text-sm">{a}</span>
+              <div key={a.name} className="flex flex-col gap-3 rounded-xl border border-border/60 bg-background/50 p-5">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-sm font-semibold">{a.name}</span>
+                </div>
+                <span className="text-sm font-bold text-primary">{a.price}</span>
+                <p className="text-xs text-muted-foreground">{a.body}</p>
               </div>
             ))}
           </div>
