@@ -307,8 +307,8 @@ export default function Index() {
             {[
               {
                 name: "Paint Decontamination",
-                price: "From £39.99",
-                body: "Iron Remover and Clay towel treatment to safely remove bonded contaminants, leaving the paintwork smooth, clean and ready for protection.",
+                price: "From £49.99",
+                body: "Iron fallout remover, Tar remover and Clay towel treatment to safely remove bonded contaminants, leaving the paintwork smooth, clean and ready for protection.",
               },
               {
                 name: "Deep Interior Extraction",
