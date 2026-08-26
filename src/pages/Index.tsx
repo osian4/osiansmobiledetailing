@@ -51,9 +51,11 @@ const services = [
         items: [
           "Vacuum of seats, carpets, floor mats and boot",
           "Seat upholstery cleaning with light stain removal",
-          "Wipe down of all surfaces",
+          "Thorough cleaning of all interior surfaces",
           "All cracks + crevices",
           "Floor mats cleaned",
+          "Air vents cleaned",
+          "Seat rails thoroughly cleaned",
           "Windows and mirrors cleaned to a streak-free finish",
           "Door jambs cleaned",
           "Boot cleaned",
