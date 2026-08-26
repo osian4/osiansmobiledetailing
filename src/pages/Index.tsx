@@ -28,13 +28,13 @@ const services = [
           "Safe contact wash",
           "Wheels + Tyres + Barrels deep cleaned",
           "Exterior windows cleaned",
+          "Premium tyre dressing",
         ],
       },
       {
         heading: "Protection",
         items: [
-          "1-2 Month ceramic paint sealant",
-          "Premium tyre shine",
+          "Ceramic paint sealant (Up to 2 Months)",
         ],
       },
     ],
@@ -68,13 +68,13 @@ const services = [
           "Wheels + Tyres + Barrels deep cleaned",
           "Exterior windows cleaned",
           "Ceramic sealant applied",
+          "Premium tyre dressing",
         ],
       },
       {
         heading: "Protection",
         items: [
-          "1–2 month ceramic paint sealant",
-          "Premium tyre shine",
+          "Ceramic paint sealant (Up to 2 Months)",
         ],
       },
     ],
@@ -103,13 +103,7 @@ const services = [
           "Safe contact wash",
           "Wheels + Tyres + Barrels deep cleaned",
           "Exterior windows cleaned",
-        ],
-      },
-      {
-        heading: "Protection",
-        items: [
-          "1-2 Month ceramic paint sealant",
-          "Premium tyre shine",
+          "Premium tyre dressing",
         ],
       },
     ],
