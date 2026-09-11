@@ -50,7 +50,7 @@ const services = [
         heading: "Interior (detailed cleaning)",
         items: [
           "Vacuum of seats, carpets, floor mats and boot",
-          "Seat upholstery cleaning with light stain removal",
+          "Seat upholstery cleaning",
           "Deep interior extraction of fabric seats and floor mats",
           "Thorough cleaning of all interior surfaces",
           "All cracks + crevices",
