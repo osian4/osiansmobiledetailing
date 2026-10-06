@@ -1,6 +1,22 @@
 import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import abarthBefore from "@/assets/abarth_before.jpg";
+import abarthAfter from "@/assets/abarth_after.jpg";
+import mercedesBefore from "@/assets/mercedes_before.jpg";
+import mercedesAfter from "@/assets/mercedes_after.jpg";
+import seatsBefore from "@/assets/seats_before.jpg";
+import seatsAfter from "@/assets/seats_after.jpg";
+import wheelsBefore from "@/assets/wheels_before.jpg";
+import wheelsAfter from "@/assets/wheels_after.jpg";
+
+const transformations = [
+  { label: "Abarth", before: abarthBefore, after: abarthAfter },
+  { label: "Mercedes", before: mercedesBefore, after: mercedesAfter },
+  { label: "Interior", before: seatsBefore, after: seatsAfter },
+  { label: "Wheels", before: wheelsBefore, after: wheelsAfter },
+];
 
 const services = [
   {
@@ -335,6 +351,27 @@ export default function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TRANSFORMATIONS */}
+      <section id="transformations" className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mb-16 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our work</p>
+          <h2 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Transformations</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Real results from real vehicles. Drag the slider on each image to reveal the
+            difference our detailing makes.
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2">
+          {transformations.map((t) => (
+            <div key={t.label} className="flex flex-col gap-3">
+              <BeforeAfterSlider before={t.before} after={t.after} alt={t.label} />
+              <p className="text-center font-display text-lg tracking-wide">{t.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
