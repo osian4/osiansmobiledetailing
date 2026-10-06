@@ -354,6 +354,28 @@ export default function Index() {
         </div>
       </section>
 
+      {/* TRANSFORMATIONS */}
+      <section id="transformations" className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mb-16 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our work</p>
+          <h2 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Transformations</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Real results from real vehicles. Drag the slider on each image to reveal the
+            difference our detailing makes.
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2">
+          {transformations.map((t) => (
+            <div key={t.label} className="flex flex-col gap-3">
+              <BeforeAfterSlider before={t.before} after={t.after} alt={t.label} />
+              <p className="text-center font-display text-lg tracking-wide">{t.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
       {/* ABOUT */}
       <section id="about" className="border-y border-border bg-card/30 py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
