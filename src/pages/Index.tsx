@@ -2,14 +2,14 @@ import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import abarthBefore from "@/assets/abarth_before.jpg.asset.json";
-import abarthAfter from "@/assets/abarth_after.jpg.asset.json";
-import mercedesBefore from "@/assets/mercedes_before.jpg.asset.json";
-import mercedesAfter from "@/assets/mercedes_after.png.asset.json";
-import seatsBefore from "@/assets/seats_before.jpg.asset.json";
-import seatsAfter from "@/assets/seats_after.jpg.asset.json";
-import wheelsBefore from "@/assets/wheels_before.jpg.asset.json";
-import wheelsAfter from "@/assets/wheels_after.jpg.asset.json";
+import abarthBefore from "@/assets/abarth_before.jpg";
+import abarthAfter from "@/assets/abarth_after.jpg";
+import mercedesBefore from "@/assets/mercedes_before.jpg";
+import mercedesAfter from "@/assets/mercedes_after.jpg";
+import seatsBefore from "@/assets/seats_before.jpg";
+import seatsAfter from "@/assets/seats_after.jpg";
+import wheelsBefore from "@/assets/wheels_before.jpg";
+import wheelsAfter from "@/assets/wheels_after.jpg";
 
 const transformations = [
   { label: "Abarth", before: abarthBefore.url, after: abarthAfter.url },
