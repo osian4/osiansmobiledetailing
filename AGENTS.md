@@ -1,0 +1,2 @@
+Keep before/after interaction in the reusable BeforeAfterSlider component so all gallery comparisons share initial state and accessible controls.
+Bundle gallery photographs as local imports so standalone hosting serves the same images as the preview.

@@ -1,0 +1,3 @@
+- [x] Remove visible gallery captions and update active Before/After label colours.
+- [x] Add Transformations navigation using the existing smooth anchor scrolling.
+- [ ] Verify initial images, slider interactions, navigation and page layout.
