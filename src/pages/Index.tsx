@@ -192,14 +192,16 @@ export default function Index() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary">
               <MapPin className="h-3.5 w-3.5" /> Based in Telford, UK
             </div>
-            <h1 className="mt-6 font-display text-6xl leading-none tracking-tight sm:text-7xl md:text-8xl">
-              Detail that <span className="text-primary">shines</span>.
+            <h1 className="mt-6 font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+              Mobile Detailing
               <br />
-              Service that <span className="text-primary">delivers</span>.
+              &amp; Valeting
+              <br />
+              in <span className="text-primary">Telford</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Premium mobile car detailing brought directly to your driveway.
-              Interior, exterior and full-service packages with ceramic protection.
+              Professional mobile car detailing and valeting brought directly to
+              your driveway.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
