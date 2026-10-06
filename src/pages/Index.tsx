@@ -375,7 +375,6 @@ export default function Index() {
         </div>
       </section>
 
-
       {/* ABOUT */}
       <section id="about" className="border-y border-border bg-card/30 py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
