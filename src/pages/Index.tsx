@@ -1,6 +1,22 @@
 import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroCar from "@/assets/hero-car.jpg";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import abarthBefore from "@/assets/abarth_before.jpg.asset.json";
+import abarthAfter from "@/assets/abarth_after.jpg.asset.json";
+import mercedesBefore from "@/assets/mercedes_before.jpg.asset.json";
+import mercedesAfter from "@/assets/mercedes_after.png.asset.json";
+import seatsBefore from "@/assets/seats_before.jpg.asset.json";
+import seatsAfter from "@/assets/seats_after.jpg.asset.json";
+import wheelsBefore from "@/assets/wheels_before.jpg.asset.json";
+import wheelsAfter from "@/assets/wheels_after.jpg.asset.json";
+
+const transformations = [
+  { label: "Abarth", before: abarthBefore.url, after: abarthAfter.url },
+  { label: "Mercedes", before: mercedesBefore.url, after: mercedesAfter.url },
+  { label: "Interior", before: seatsBefore.url, after: seatsAfter.url },
+  { label: "Wheels", before: wheelsBefore.url, after: wheelsAfter.url },
+];
 
 const services = [
   {
