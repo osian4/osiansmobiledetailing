@@ -12,10 +12,10 @@ import wheelsBefore from "@/assets/wheels_before.jpg";
 import wheelsAfter from "@/assets/wheels_after.jpg";
 
 const transformations = [
-  { label: "Abarth", before: abarthBefore.url, after: abarthAfter.url },
-  { label: "Mercedes", before: mercedesBefore.url, after: mercedesAfter.url },
-  { label: "Interior", before: seatsBefore.url, after: seatsAfter.url },
-  { label: "Wheels", before: wheelsBefore.url, after: wheelsAfter.url },
+  { label: "Abarth", before: abarthBefore, after: abarthAfter },
+  { label: "Mercedes", before: mercedesBefore, after: mercedesAfter },
+  { label: "Interior", before: seatsBefore, after: seatsAfter },
+  { label: "Wheels", before: wheelsBefore, after: wheelsAfter },
 ];
 
 const services = [
