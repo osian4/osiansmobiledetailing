@@ -28,10 +28,11 @@ export default function BeforeAfterSlider({ before, after, alt }: BeforeAfterSli
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={Math.round(position)}
+      aria-valuetext={`${Math.round(position)}% after, ${100 - Math.round(position)}% before`}
       tabIndex={0}
       className="group relative aspect-[3/4] w-full cursor-ew-resize touch-none select-none overflow-hidden rounded-2xl border border-border bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       onPointerDown={(e) => {
-        (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+        e.currentTarget.setPointerCapture(e.pointerId);
         setDragging(true);
         updateFromClientX(e.clientX);
       }}
@@ -39,8 +40,11 @@ export default function BeforeAfterSlider({ before, after, alt }: BeforeAfterSli
       onPointerUp={() => setDragging(false)}
       onPointerCancel={() => setDragging(false)}
       onKeyDown={(e) => {
+        if (["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) e.preventDefault();
         if (e.key === "ArrowRight") setPosition((p) => Math.min(100, p + 5));
         if (e.key === "ArrowLeft") setPosition((p) => Math.max(0, p - 5));
+        if (e.key === "Home") setPosition(0);
+        if (e.key === "End") setPosition(100);
       }}
     >
       {/* Before (base layer) */}
@@ -60,10 +64,10 @@ export default function BeforeAfterSlider({ before, after, alt }: BeforeAfterSli
       />
 
       {/* Labels */}
-      <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-background/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary backdrop-blur">
+      <span className={`pointer-events-none absolute left-3 top-3 rounded-full bg-background/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur transition-colors ${position > 50 ? "text-primary" : "text-muted-foreground"}`}>
         After
       </span>
-      <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-background/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground backdrop-blur">
+      <span className={`pointer-events-none absolute right-3 top-3 rounded-full bg-background/70 px-3 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur transition-colors ${position <= 50 ? "text-primary" : "text-muted-foreground"}`}>
         Before
       </span>
 

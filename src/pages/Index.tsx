@@ -148,6 +148,7 @@ export default function Index() {
           </a>
           <nav className="hidden justify-self-center gap-8 text-sm font-medium md:flex">
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
+            <a href="#transformations" className="hover:text-primary transition-colors">Transformations</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
@@ -367,10 +368,7 @@ export default function Index() {
 
         <div className="grid gap-8 sm:grid-cols-2">
           {transformations.map((t) => (
-            <div key={t.label} className="flex flex-col gap-3">
-              <BeforeAfterSlider before={t.before} after={t.after} alt={t.label} />
-              <p className="text-center font-display text-lg tracking-wide">{t.label}</p>
-            </div>
+            <BeforeAfterSlider key={t.label} before={t.before} after={t.after} alt={t.label} />
           ))}
         </div>
       </section>
