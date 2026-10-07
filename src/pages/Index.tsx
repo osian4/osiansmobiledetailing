@@ -361,7 +361,7 @@ export default function Index() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our work</p>
           <h2 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Transformations</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Real results from real vehicles. Drag the slider on each image to reveal the
+            Real results from Osian's Mobile Detailing. Drag the slider on each image to reveal the
             difference our detailing makes.
           </p>
         </div>
