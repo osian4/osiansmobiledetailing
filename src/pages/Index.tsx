@@ -400,8 +400,17 @@ export default function Index() {
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Get in touch</p>
         <h2 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Ready to book?</h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          Send a message or give us a call — we'll get your car gleaming in no time.
+          Fill in the form below for a free quote and we'll get back to you to confirm your appointment.
         </p>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/book"
+            className="rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground transition hover:opacity-90"
+          >
+            Book Now
+          </Link>
+        </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           <a
