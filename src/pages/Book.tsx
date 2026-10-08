@@ -4,12 +4,20 @@ import { ArrowLeft, Check, CheckCircle2, Loader2, Upload, X } from "lucide-react
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
 
-const SERVICES = ["Premium Valet", "Signature Detail", "Maintenance Valet"] as const;
+const SERVICES = [
+  { name: "Premium Valet", price: "From £79.99" },
+  { name: "Signature Detail", price: "From £179.99" },
+  { name: "Maintenance Valet", price: "From £79.99" },
+] as const;
 const VEHICLE_SIZES = ["Hatchback / Coupe", "Saloon / Estate", "SUV / 4x4 / Van"] as const;
-const ADD_ONS = ["Paint Decontamination", "Deep Interior Extraction", "Engine Bay Refresh"] as const;
+const ADD_ONS = [
+  { name: "Paint Decontamination", price: "From £49.99" },
+  { name: "Deep Interior Extraction", price: "From £39.99" },
+  { name: "Engine Bay Refresh", price: "From £29.99" },
+] as const;
 const CONDITION_FLAGS = ["Pet hair", "Heavy mud", "Child seats"] as const;
 const HEAR_ABOUT = ["Instagram", "TikTok", "Facebook", "Flyer / Business Card", "Word of Mouth", "Google"] as const;
-const TIME_SLOTS = ["Morning (8am–12pm)", "Afternoon (12pm–4pm)", "Evening (4pm–7pm)"] as const;
+const TIME_SLOTS = ["Morning (8am–12pm)", "Afternoon (12pm–4pm)"] as const;
 
 interface FormState {
   name: string;
@@ -217,8 +225,8 @@ export default function Book() {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Book online</p>
               <h1 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">Book Your Detail</h1>
               <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-                Fill in the form below and we'll get back to you to confirm your appointment. All fields marked
-                with an asterisk are required.
+                Fill in the form below for a free quote and we'll get back to you to confirm your appointment. All
+                fields marked with an asterisk are required.
               </p>
             </div>
 
@@ -339,15 +347,16 @@ export default function Book() {
                     {SERVICES.map((s) => (
                       <button
                         type="button"
-                        key={s}
-                        onClick={() => set("service", s)}
+                        key={s.name}
+                        onClick={() => set("service", s.name)}
                         className={`rounded-lg border px-4 py-3 text-sm font-semibold transition ${
-                          form.service === s
+                          form.service === s.name
                             ? "border-primary bg-primary/10 text-primary"
                             : "border-border bg-background text-muted-foreground hover:border-primary/50"
                         }`}
                       >
-                        {s}
+                        <span className="block">{s.name}</span>
+                        <span className="mt-0.5 block text-xs font-medium text-muted-foreground">{s.price}</span>
                       </button>
                     ))}
                   </div>
@@ -360,15 +369,16 @@ export default function Book() {
                     {ADD_ONS.map((a) => (
                       <button
                         type="button"
-                        key={a}
-                        onClick={() => toggleList("addOns", a)}
+                        key={a.name}
+                        onClick={() => toggleList("addOns", a.name)}
                         className={`rounded-full border px-4 py-2 text-xs font-medium transition ${
-                          form.addOns.includes(a)
+                          form.addOns.includes(a.name)
                             ? "border-primary bg-primary/10 text-primary"
                             : "border-border bg-background text-muted-foreground hover:border-primary/50"
                         }`}
                       >
-                        {a}
+                        {a.name}{" "}
+                        <span className="opacity-80">({a.price})</span>
                       </button>
                     ))}
                   </div>
