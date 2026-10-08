@@ -9,7 +9,11 @@ const SERVICES = [
   { name: "Signature Detail", price: "From £179.99" },
   { name: "Maintenance Valet", price: "From £79.99" },
 ] as const;
-const VEHICLE_SIZES = ["Hatchback / Coupe", "Saloon / Estate", "SUV / 4x4 / Van"] as const;
+const VEHICLE_SIZES = [
+  { name: "Hatchback / Coupe", example: "e.g. Fiesta, A-Class" },
+  { name: "Saloon / Estate", example: "e.g. 3 Series, Passat" },
+  { name: "SUV / 4x4 / Van", example: "e.g. Range Rover, Q7" },
+] as const;
 const ADD_ONS = [
   { name: "Paint Decontamination", price: "From £49.99" },
   { name: "Deep Interior Extraction", price: "From £39.99" },
@@ -264,7 +268,7 @@ export default function Book() {
                       autoComplete="tel"
                     />
                   </Field>
-                  <Field label="Location / Postcode (Telford area) *" error={errors.postcode}>
+                  <Field label="Location / Postcode *" error={errors.postcode}>
                     <input
                       className={inputClass}
                       value={form.postcode}
@@ -322,15 +326,16 @@ export default function Book() {
                     {VEHICLE_SIZES.map((size) => (
                       <button
                         type="button"
-                        key={size}
-                        onClick={() => set("vehicleSize", size)}
+                        key={size.name}
+                        onClick={() => set("vehicleSize", size.name)}
                         className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition ${
-                          form.vehicleSize === size
+                          form.vehicleSize === size.name
                             ? "border-primary bg-primary/10 text-primary"
                             : "border-border bg-background text-muted-foreground hover:border-primary/50"
                         }`}
                       >
-                        {size}
+                        <span className="block">{size.name}</span>
+                        <span className="mt-0.5 block text-xs font-normal opacity-80">{size.example}</span>
                       </button>
                     ))}
                   </div>
