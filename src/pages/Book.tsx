@@ -268,13 +268,13 @@ export default function Book() {
                       autoComplete="tel"
                     />
                   </Field>
-                  <Field label="Location / Postcode *" error={errors.postcode}>
+                  <Field label="Location / Postcode / House Number / Street Name *" error={errors.postcode}>
                     <input
                       className={inputClass}
                       value={form.postcode}
                       onChange={(e) => set("postcode", e.target.value)}
-                      placeholder="e.g. TF1 2AB"
-                      autoComplete="postal-code"
+                      placeholder="e.g. 12 High Street, TF1 2AB"
+                      autoComplete="street-address"
                     />
                   </Field>
                 </div>
