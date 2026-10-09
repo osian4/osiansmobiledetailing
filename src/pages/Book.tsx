@@ -268,7 +268,7 @@ export default function Book() {
                       autoComplete="tel"
                     />
                   </Field>
-                  <Field label="Location / Postcode / House Number / Street Name *" error={errors.postcode}>
+                  <Field label="Postcode / House Number / Street Name *" error={errors.postcode}>
                     <input
                       className={inputClass}
                       value={form.postcode}
