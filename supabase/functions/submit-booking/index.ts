@@ -10,7 +10,7 @@ const BookingSchema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   phone: z.string().trim().regex(/^(\+44\s?|0)\d[\d\s]{8,12}$/, "Invalid UK phone number"),
-  postcode: z.string().trim().regex(/^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/, "Invalid postcode"),
+  postcode: z.string().trim().min(5).max(200).regex(/[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}/, "Please include a valid UK postcode"),
   regPlate: z.string().trim().regex(/^[A-Za-z]{2}\d{2}\s?[A-Za-z]{3}$/, "Invalid UK registration"),
   vehicleMake: z.string().trim().min(1).max(50),
   vehicleModel: z.string().trim().min(1).max(50),
