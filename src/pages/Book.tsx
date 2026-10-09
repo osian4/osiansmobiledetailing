@@ -21,7 +21,7 @@ const ADD_ONS = [
 ] as const;
 const CONDITION_FLAGS = ["Pet hair", "Heavy mud", "Child seats"] as const;
 const HEAR_ABOUT = ["Instagram", "TikTok", "Facebook", "Flyer / Business Card", "Word of Mouth", "Google"] as const;
-const TIME_SLOTS = ["Morning (8am–12pm)", "Afternoon (12pm–4pm)"] as const;
+const TIME_SLOTS = ["Morning (9am–12pm)", "Afternoon (12pm–4pm)"] as const;
 
 interface FormState {
   name: string;
@@ -268,7 +268,7 @@ export default function Book() {
                       autoComplete="tel"
                     />
                   </Field>
-                  <Field label="Postcode / House Number / Street Name *" error={errors.postcode}>
+                  <Field label="Location *" error={errors.postcode}>
                     <input
                       className={inputClass}
                       value={form.postcode}
