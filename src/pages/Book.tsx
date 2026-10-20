@@ -1,4 +1,22 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const BOOK_TITLE = "Get a Free Quote & Book Online | Osian's Mobile Detailing & Valeting — Telford";
+const BOOK_DESC =
+  "Get a free quote for mobile valeting and detailing in Telford. Choose your package, pick your preferred date and time, and book online in minutes.";
+
+function useBookingMeta() {
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]');
+    const prevTitle = document.title;
+    const prevDesc = meta?.getAttribute("content") ?? "";
+    document.title = BOOK_TITLE;
+    meta?.setAttribute("content", BOOK_DESC);
+    return () => {
+      document.title = prevTitle;
+      meta?.setAttribute("content", prevDesc);
+    };
+  }, []);
+}
 import { Link } from "react-router-dom";
 import { ArrowLeft, Check, CheckCircle2, Loader2, Upload, X } from "lucide-react";
 import logo from "@/assets/logo.png";
