@@ -134,6 +134,7 @@ function Field({
 }
 
 export default function Book() {
+  useBookingMeta();
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<string, string>>>({});
   const [photos, setPhotos] = useState<File[]>([]);
