@@ -20,7 +20,7 @@ const BookingSchema = z.object({
   addOns: z.array(z.enum(["Paint Decontamination", "Deep Interior Extraction", "Engine Bay Refresh"])).max(3),
   conditionFlags: z.array(z.enum(["Pet hair", "Heavy mud", "Child seats"])).max(3),
   preferredDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  timeSlot: z.enum(["Morning (8am–12pm)", "Afternoon (12pm–4pm)"]),
+  timeSlot: z.enum(["Morning (9am–12pm)", "Afternoon (12pm–4pm)"]),
   utilitiesConfirmed: z.literal(true),
   depositAcknowledged: z.literal(true),
   hearAbout: z.enum(["Instagram", "TikTok", "Facebook", "Flyer / Business Card", "Word of Mouth", "Google"]),
