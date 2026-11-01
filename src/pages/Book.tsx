@@ -4,16 +4,22 @@ const BOOK_TITLE = "Get a Free Quote & Book Online | Osian's Mobile Detailing & 
 const BOOK_DESC =
   "Get a free quote for mobile valeting and detailing in Telford. Choose your package, pick your preferred date and time, and book online in minutes.";
 
+const SITE_URL = "https://www.osiansmobiledetailing.com";
+
 function useBookingMeta() {
   useEffect(() => {
     const meta = document.querySelector('meta[name="description"]');
+    const canonical = document.querySelector('link[rel="canonical"]');
     const prevTitle = document.title;
     const prevDesc = meta?.getAttribute("content") ?? "";
+    const prevCanonical = canonical?.getAttribute("href") ?? "";
     document.title = BOOK_TITLE;
     meta?.setAttribute("content", BOOK_DESC);
+    canonical?.setAttribute("href", `${SITE_URL}/book`);
     return () => {
       document.title = prevTitle;
       meta?.setAttribute("content", prevDesc);
+      canonical?.setAttribute("href", prevCanonical);
     };
   }, []);
 }
@@ -85,16 +91,14 @@ const initialState: FormState = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^(\+44\s?|0)\d[\d\s]{8,12}$/;
-const REG_RE = /^[A-Za-z]{2}\d{2}\s?[A-Za-z]{3}$/;
-const POSTCODE_RE = /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/;
 
 function validate(form: FormState): Partial<Record<string, string>> {
   const errors: Partial<Record<string, string>> = {};
   if (!form.name.trim()) errors.name = "Please enter your full name";
   if (!EMAIL_RE.test(form.email.trim())) errors.email = "Please enter a valid email address";
   if (!PHONE_RE.test(form.phone.trim())) errors.phone = "Please enter a valid UK phone number";
-  if (!POSTCODE_RE.test(form.postcode.trim())) errors.postcode = "Please enter a valid postcode";
-  if (!REG_RE.test(form.regPlate.trim())) errors.regPlate = "Please enter a valid UK registration (e.g. AB21 XYZ)";
+  if (!form.postcode.trim()) errors.postcode = "Please enter your location";
+  if (!form.regPlate.trim()) errors.regPlate = "Please enter your registration plate";
   if (!form.vehicleMake.trim()) errors.vehicleMake = "Please enter the vehicle make";
   if (!form.vehicleModel.trim()) errors.vehicleModel = "Please enter the vehicle model";
   const year = Number(form.vehicleYear);
