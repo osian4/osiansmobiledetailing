@@ -27,6 +27,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Check, CheckCircle2, Loader2, Upload, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
+import { estimate, formatPounds } from "@/lib/pricing";
 
 const SERVICES = [
   { name: "Premium Valet", price: "From £79.99" },
@@ -570,6 +571,39 @@ export default function Book() {
                 </div>
               </section>
 
+              {/* PRICE ESTIMATE */}
+              <section id="price-estimate" className="rounded-2xl border-2 border-primary/60 bg-card p-6 sm:p-8">
+                <h2 className="font-display text-2xl tracking-wide">Estimated Price</h2>
+                {quote.lines.length === 0 ? (
+                  <p className="mt-3 text-sm text-muted-foreground">Select a service above to see your estimated starting price.</p>
+                ) : (
+                  <>
+                    <ul className="mt-5 space-y-2 text-sm">
+                      {quote.lines.map((l) => (
+                        <li key={l.name} className="flex justify-between gap-4">
+                          <span>{l.name}</span>
+                          <span className="text-muted-foreground">From {formatPounds(l.pence)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-4 flex items-baseline justify-between border-t border-border pt-4">
+                      <span className="font-semibold">Estimated total</span>
+                      <span className="font-display text-3xl text-primary">From {formatPounds(quote.total)}</span>
+                    </div>
+                  </>
+                )}
+                <ul className="mt-5 space-y-1 text-xs text-muted-foreground">
+                  {form.service === "Premium Valet" && <li>• Premium Valet shown at the new customer price (normally £99.99).</li>}
+                  {form.service === "Maintenance Valet" && <li>• Maintenance Valet is for customers who have had a Signature Detail with us.</li>}
+                  <li>• Final price confirmed upon inspection of your vehicle.</li>
+                  {(form.conditionFlags.includes("Pet hair") || form.conditionFlags.includes("Heavy mud")) && (
+                    <li>• Pet hair / heavy mud may incur an extra charge, assessed on inspection.</li>
+                  )}
+                  <li>• A 50% non-refundable deposit is required to secure your booking.</li>
+                  <li>• No payment is taken online.</li>
+                </ul>
+              </section>
+
               {submitError && (
                 <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
                   {submitError}
@@ -577,6 +611,7 @@ export default function Book() {
               )}
 
               <button
+                id="booking-submit"
                 type="submit"
                 disabled={submitting}
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
@@ -585,6 +620,31 @@ export default function Book() {
                 {submitting ? "Sending your booking…" : "Submit Booking Request"}
               </button>
             </form>
+
+            {/* Mobile sticky estimate bar */}
+            {quote.lines.length > 0 && (
+              <div className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-primary bg-card/95 px-4 py-3 backdrop-blur md:hidden">
+                <div className="flex items-center justify-between gap-3">
+                  <button
+                    type="button"
+                    onClick={() => document.getElementById("price-estimate")?.scrollIntoView({ behavior: "smooth", block: "center" })}
+                    className="text-left"
+                  >
+                    <span className="block text-[11px] uppercase tracking-wider text-muted-foreground">
+                      Estimated · {quote.lines.length} {quote.lines.length === 1 ? "item" : "items"} · View
+                    </span>
+                    <span className="block font-display text-xl text-primary">From {formatPounds(quote.total)}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => (document.getElementById("booking-submit") as HTMLButtonElement | null)?.click()}
+                    className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+                  >
+                    Request Booking
+                  </button>
+                </div>
+              </div>
+            )}
           </>
         )}
       </main>
