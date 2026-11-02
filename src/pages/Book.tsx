@@ -152,6 +152,8 @@ export default function Book() {
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((f) => ({ ...f, [key]: value }));
 
+  const quote = estimate(form.service, form.addOns);
+
   const toggleList = (key: "addOns" | "conditionFlags", value: string) =>
     setForm((f) => ({
       ...f,
@@ -216,7 +218,7 @@ export default function Book() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-3xl px-6 py-16">
+      <main className="mx-auto max-w-3xl px-6 py-16 pb-32 md:pb-16">
         {submitted ? (
           <div className="rounded-2xl border border-primary/40 bg-card p-10 text-center shadow-[var(--shadow-glow)]">
             <CheckCircle2 className="mx-auto h-14 w-14 text-primary" />
