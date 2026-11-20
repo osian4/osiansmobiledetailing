@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const BOOK_TITLE = "Get a Free Quote & Book Online | Osian's Mobile Detailing & Valeting — Telford";
 const BOOK_DESC =
-  "Get a free quote for mobile valeting and detailing in Telford. Choose your package, pick your preferred date and time, and book online in minutes.";
+  "Get a free quote for mobile valeting and detailing in Telford. Choose your package, pick your preferred date, and book online in minutes.";
 
 const SITE_URL = "https://www.osiansmobiledetailing.com";
 
@@ -46,7 +46,6 @@ const ADD_ONS = [
 ] as const;
 const CONDITION_FLAGS = ["Pet hair", "Heavy mud", "Child seats"] as const;
 const HEAR_ABOUT = ["Instagram", "TikTok", "Facebook", "Flyer / Business Card", "Word of Mouth", "Google"] as const;
-const TIME_SLOTS = ["Morning (9am–12pm)", "Afternoon (12pm–4pm)"] as const;
 
 interface FormState {
   name: string;
@@ -62,7 +61,6 @@ interface FormState {
   addOns: string[];
   conditionFlags: string[];
   preferredDate: string;
-  timeSlot: string;
   utilitiesConfirmed: boolean;
   depositAcknowledged: boolean;
   hearAbout: string;
@@ -83,7 +81,6 @@ const initialState: FormState = {
   addOns: [],
   conditionFlags: [],
   preferredDate: "",
-  timeSlot: "",
   utilitiesConfirmed: false,
   depositAcknowledged: false,
   hearAbout: "",
@@ -108,7 +105,6 @@ function validate(form: FormState): Partial<Record<string, string>> {
   if (!form.vehicleSize) errors.vehicleSize = "Please select your vehicle size";
   if (!form.service) errors.service = "Please select a service";
   if (!form.preferredDate) errors.preferredDate = "Please choose a preferred date";
-  if (!form.timeSlot) errors.timeSlot = "Please choose a time slot";
   if (!form.utilitiesConfirmed) errors.utilitiesConfirmed = "Please confirm water tap and power outlet availability";
   if (!form.depositAcknowledged) errors.depositAcknowledged = "Please acknowledge the deposit policy";
   if (!form.hearAbout) errors.hearAbout = "Please select an option";
@@ -492,20 +488,6 @@ export default function Book() {
                       min={today}
                       onChange={(e) => set("preferredDate", e.target.value)}
                     />
-                  </Field>
-                  <Field label="Preferred Time Slot *" error={errors.timeSlot}>
-                    <select
-                      className={inputClass}
-                      value={form.timeSlot}
-                      onChange={(e) => set("timeSlot", e.target.value)}
-                    >
-                      <option value="">Select a time slot</option>
-                      {TIME_SLOTS.map((t) => (
-                        <option key={t} value={t}>
-                          {t}
-                        </option>
-                      ))}
-                    </select>
                   </Field>
                 </div>
 
