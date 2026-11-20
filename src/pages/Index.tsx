@@ -23,7 +23,6 @@ const services = [
   {
     title: "Premium Valet",
     price: "£99.99",
-    newCustomerPrice: "£79.99",
     description:
       "A thorough interior & exterior valet designed to give your vehicle a refresh.",
     sections: [
@@ -133,13 +132,8 @@ const services = [
 export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* ANNOUNCEMENT BAR */}
-      <div className="fixed top-0 z-50 flex h-10 w-full items-center justify-center bg-primary px-4 text-center text-[11px] font-semibold uppercase tracking-wide text-white sm:text-xs md:text-sm md:tracking-widest">
-        NEW CUSTOMER OFFER, PREMIUM VALET £79.99 (NORMALLY £99.99)
-      </div>
-
       {/* NAV */}
-      <header className="fixed top-10 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
         <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-3">
           <a href="#top" className="flex items-center gap-3 justify-self-start">
             <img src={logo} alt="Osian's Mobile Detailing" className="h-11 w-11 rounded-full" />
@@ -196,7 +190,7 @@ export default function Index() {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-32">
+      <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-24">
         <img
           src={heroCar}
           alt="Detailed black luxury car with green accent lighting"
@@ -268,21 +262,8 @@ export default function Index() {
               <p className="mt-3 text-sm text-muted-foreground">{s.description}</p>
 
               <div className="my-6 flex items-baseline gap-2 border-y border-border py-5">
-                {s.newCustomerPrice ? (
-                  <div className="flex flex-col gap-1">
-                    <span className="font-display text-3xl text-muted-foreground line-through">{s.price}</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
-                      <span className="font-display text-5xl text-primary">{s.newCustomerPrice}</span>
-                      <span className="text-xs font-bold uppercase tracking-widest text-primary">New Customer Price</span>
-                    </div>
-                  </div>
-                ) : (
-                  <>
-                    <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
                     <span className="font-display text-5xl text-primary">{s.price}</span>
-                  </>
-                )}
               </div>
 
               <div className="flex-1 space-y-5">

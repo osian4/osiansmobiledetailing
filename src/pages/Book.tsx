@@ -30,7 +30,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { estimate, formatPounds } from "@/lib/pricing";
 
 const SERVICES = [
-  { name: "Premium Valet", price: "From £79.99" },
+  { name: "Premium Valet", price: "From £99.99" },
   { name: "Signature Detail", price: "From £179.99" },
   { name: "Maintenance Valet", price: "From £79.99" },
 ] as const;
@@ -595,7 +595,6 @@ export default function Book() {
                   </>
                 )}
                 <ul className="mt-5 space-y-1 text-xs text-muted-foreground">
-                  {form.service === "Premium Valet" && <li>• Premium Valet shown at the new customer price (normally £99.99).</li>}
                   {form.service === "Maintenance Valet" && <li>• Maintenance Valet is for customers who have had a Signature Detail with us.</li>}
                   <li>• Final price confirmed upon inspection of your vehicle.</li>
                   {(form.conditionFlags.includes("Pet hair") || form.conditionFlags.includes("Heavy mud")) && (
