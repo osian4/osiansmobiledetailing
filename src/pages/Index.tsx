@@ -72,7 +72,6 @@ const services = [
           "All cracks + crevices",
           "Floor mats cleaned",
           "Air vents cleaned",
-          "Seat rails thoroughly cleaned",
           "Windows and mirrors cleaned to a streak-free finish",
           "Door jambs cleaned",
           "Boot cleaned",
