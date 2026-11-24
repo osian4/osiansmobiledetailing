@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-const BOOK_TITLE = "Get a Free Quote & Book Online | Osian's Mobile Detailing & Valeting — Telford";
+const BOOK_TITLE = "Get a Free Quote & Book Online | Osian's Mobile Detailing — Telford";
 const BOOK_DESC =
-  "Get a free quote for mobile valeting and detailing in Telford. Choose your package, pick your preferred date, and book online in minutes.";
+  "Get a free quote for mobile car detailing in Telford. Choose your package, pick your preferred date, and book online in minutes.";
 
 const SITE_URL = "https://www.osiansmobiledetailing.com";
 
