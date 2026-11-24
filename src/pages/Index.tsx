@@ -191,13 +191,10 @@ export default function Index() {
             <h1 className="mt-6 font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
               Mobile Detailing
               <br />
-              &amp; Valeting
-              <br />
               in <span className="text-primary">Telford</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Professional mobile car detailing and valeting brought directly to
-              your driveway.
+              Professional mobile car detailing brought directly to your driveway.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
