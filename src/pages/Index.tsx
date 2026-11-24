@@ -1,7 +1,7 @@
 import { Check, MapPin, Mail, Phone, Sparkles, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import heroCar from "@/assets/hero-car.jpg";
+import heroCar from "@/assets/hero-gtr.jpg";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import abarthBefore from "@/assets/abarth_before.jpg";
 import abarthAfter from "@/assets/abarth_after.jpg";
@@ -177,8 +177,8 @@ export default function Index() {
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden pt-24">
         <img
           src={heroCar}
-          alt="Detailed black luxury car with green accent lighting"
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          alt="White widebody Nissan GT-R with green accent lighting"
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-60"
           width={1920}
           height={1080}
         />
