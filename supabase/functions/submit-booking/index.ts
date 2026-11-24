@@ -16,7 +16,7 @@ const BookingSchema = z.object({
   vehicleModel: z.string().trim().min(1).max(50),
   vehicleYear: z.coerce.number().int().min(1950).max(new Date().getFullYear() + 1),
   vehicleSize: z.enum(["Hatchback / Coupe", "Saloon / Estate", "SUV / 4x4 / Van"]),
-  service: z.enum(["Premium Valet", "Signature Detail", "Maintenance Valet"]),
+  service: z.enum(["Interior Detail", "Signature Detail", "Exterior Detail"]),
   addOns: z.array(z.enum(["Paint Decontamination", "Deep Interior Extraction", "Engine Bay Refresh"])).max(3),
   conditionFlags: z.array(z.enum(["Pet hair", "Heavy mud", "Child seats"])).max(3),
   preferredDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),

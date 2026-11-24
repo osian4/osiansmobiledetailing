@@ -21,36 +21,24 @@ const transformations = [
 
 const services = [
   {
-    title: "Premium Valet",
-    price: "£99.99",
+    title: "Interior Detail",
+    price: "£119.99",
     description:
-      "A thorough interior & exterior valet designed to give your vehicle a refresh.",
+      "A thorough interior deep clean designed to refresh your vehicle's cabin, removing dirt, dust and built-up grime while leaving all surfaces clean, fresh and well presented.",
     sections: [
       {
-        heading: "Interior",
+        heading: "Interior (detailed cleaning)",
         items: [
           "Vacuum of seats, carpets, floor mats and boot",
-          "Wipe down all interior surfaces",
+          "Seat upholstery cleaning",
+          "Deep interior extraction of fabric seats and floor mats",
+          "Thorough cleaning of all interior surfaces",
+          "All cracks + crevices",
+          "Floor mats cleaned",
+          "Air vents cleaned",
           "Windows and mirrors cleaned to a streak-free finish",
           "Door jambs cleaned",
           "Boot cleaned",
-        ],
-      },
-      {
-        heading: "Exterior",
-        items: [
-          "Multi stage safe wash process",
-          "Pre-wash with snow foam",
-          "Safe contact wash",
-          "Wheels + Tyres + Barrels deep cleaned",
-          "Windows and mirrors cleaned to a streak-free finish",
-          "Premium tyre dressing",
-        ],
-      },
-      {
-        heading: "Protection",
-        items: [
-          "Ceramic paint sealant (Up to 2 Months)",
         ],
       },
     ],
@@ -98,30 +86,27 @@ const services = [
     ],
   },
   {
-    title: "Maintenance Valet",
+    title: "Exterior Detail",
     price: "£79.99",
     description:
-      "A regular upkeep service reserved for customers who have had our signature detail, designed to keep your vehicle clean and fresh between more intensive details, covering the essential interior and exterior cleaning.",
+      "A comprehensive exterior deep clean focused on safely cleaning and enhancing your vehicle, restoring its shine and leaving it protected with a high-quality finish.",
     sections: [
       {
-        heading: "Interior",
-        items: [
-          "Vacuum of seats, carpets, floor mats and boot",
-          "Wipe down all interior surfaces",
-          "Windows and mirrors cleaned to a streak-free finish",
-          "Door jambs cleaned",
-          "Boot cleaned",
-        ],
-      },
-      {
-        heading: "Exterior",
+        heading: "Exterior (detailed wash)",
         items: [
           "Multi stage safe wash process",
           "Pre-wash with snow foam",
           "Safe contact wash",
           "Wheels + Tyres + Barrels deep cleaned",
           "Windows and mirrors cleaned to a streak-free finish",
+          "Ceramic sealant applied",
           "Premium tyre dressing",
+        ],
+      },
+      {
+        heading: "Protection",
+        items: [
+          "Ceramic paint sealant (Up to 2 Months)",
         ],
       },
     ],

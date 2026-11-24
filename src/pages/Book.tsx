@@ -30,9 +30,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { estimate, formatPounds } from "@/lib/pricing";
 
 const SERVICES = [
-  { name: "Premium Valet", price: "From £99.99" },
+  { name: "Interior Detail", price: "From £119.99" },
   { name: "Signature Detail", price: "From £179.99" },
-  { name: "Maintenance Valet", price: "From £79.99" },
+  { name: "Exterior Detail", price: "From £79.99" },
 ] as const;
 const VEHICLE_SIZES = [
   { name: "Hatchback / Coupe", example: "e.g. Fiesta, A-Class" },
@@ -577,7 +577,6 @@ export default function Book() {
                   </>
                 )}
                 <ul className="mt-5 space-y-1 text-xs text-muted-foreground">
-                  {form.service === "Maintenance Valet" && <li>• Maintenance Valet is for customers who have had a Signature Detail with us.</li>}
                   <li>• Final price confirmed upon inspection of your vehicle.</li>
                   {(form.conditionFlags.includes("Pet hair") || form.conditionFlags.includes("Heavy mud")) && (
                     <li>• Pet hair / heavy mud may incur an extra charge, assessed on inspection.</li>

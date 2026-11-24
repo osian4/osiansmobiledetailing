@@ -1,8 +1,8 @@
 // Starting prices in pence (integer maths avoids rounding errors).
 export const SERVICE_PRICES: Record<string, number> = {
-  "Premium Valet": 9999,
+  "Interior Detail": 11999,
   "Signature Detail": 17999,
-  "Maintenance Valet": 7999,
+  "Exterior Detail": 7999,
 };
 export const ADD_ON_PRICES: Record<string, number> = {
   "Paint Decontamination": 4999,

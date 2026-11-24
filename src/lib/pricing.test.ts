@@ -7,11 +7,11 @@ describe("price estimator", () => {
     expect(formatPounds(r.total)).toBe("£259.97");
     expect(r.lines).toHaveLength(3);
   });
-  it("Premium Valet with all add-ons = £219.96", () => {
-    expect(formatPounds(estimate("Premium Valet", ["Paint Decontamination", "Deep Interior Extraction", "Engine Bay Refresh"]).total)).toBe("£219.96");
+  it("Interior Detail with all add-ons = £239.96", () => {
+    expect(formatPounds(estimate("Interior Detail", ["Paint Decontamination", "Deep Interior Extraction", "Engine Bay Refresh"]).total)).toBe("£239.96");
   });
-  it("Maintenance Valet alone = £79.99", () => {
-    expect(formatPounds(estimate("Maintenance Valet", []).total)).toBe("£79.99");
+  it("Exterior Detail alone = £79.99", () => {
+    expect(formatPounds(estimate("Exterior Detail", []).total)).toBe("£79.99");
   });
   it("nothing selected = £0.00", () => {
     expect(estimate("", []).total).toBe(0);
